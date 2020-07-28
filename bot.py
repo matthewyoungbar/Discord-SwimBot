@@ -1,8 +1,11 @@
 import requests
 import urllib.parse
 from discord.ext import commands
+import recordParser
 
 TOKEN = open("token.txt").read().strip()
+
+recordDict, nameDict = recordParser.parseRecords("records.csv")
 
 bot = commands.Bot(command_prefix='!')
 
@@ -31,5 +34,22 @@ async def collegeswimming(ctx, *args):
 @bot.command()
 async def cs(ctx, *args):
     await collegeswimming(ctx, *args)
+
+@bot.command()
+async def record(ctx, *args):
+    query = ' '.join(args)
+    results = ""
+    if recordDict.get(query) != None:
+        for i in recordDict[query]:
+            results += "Record for " + query + " is " + i["name"] + " with a " + i["time"] + " in " + i["year"] + "\n"
+        await ctx.send(results)
+    elif nameDict.get(query) != None:
+        results += query + " has the following record(s):\n"
+        for i in nameDict[query]:
+            results += i["event"] + " with a time of " + i["time"] + " in the year " + i["year"] + "\n"
+        await ctx.send(results)
+    else:
+        await ctx.send("Couldn't find that record.")
+
 
 bot.run(TOKEN)
