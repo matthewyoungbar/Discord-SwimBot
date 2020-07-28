@@ -2,7 +2,7 @@ import requests
 import urllib.parse
 from discord.ext import commands
 
-TOKEN = "NzM3NDE5NDQwNjAxMTcwMDEw.Xx9FXw.yYzdbBSHkKR38Lukdd-tYIadqqM"
+TOKEN = open("token.txt").read().strip()
 
 bot = commands.Bot(command_prefix='!')
 
