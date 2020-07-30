@@ -1,47 +1,47 @@
-50 Freestyle Kaitlin Joyce 24.01 2019
-100 Freestyle Allison Geer 51.88 2002
-200 Freestyle Jessica Sauve 1:52.25 2017
-500 Freestyle Jessica Sauve 4:56.58 2017
-1000 Freestyle Tina Belletete 10:36.74 2011
-1650 Freestyle Tina Belletete 17:35.72 2011
-100 Backstroke Amanda Wang 55.59 2019
-200 Backstroke Megan Beaulieu 2:02.53 2019
-100 Butterfly Shanny Lini 57.15 2017
-200 Butterfly Shanny Lini 2:01.19 2016
-100 Breaststroke Katrina Lopez 1:06.42 2020
-200 Breaststroke Meghan Hartman 2:19.21 2004
-200 Indv. Medley Megan Beaulieu 2:07.33 2020
-400 Indv. Medley Danielle Sauve 4:27.95 2017
-200 Medley Relay Wang, Sauve, Yamashita, Sauve 1:44.33 2018
-400 Medley Relay Wang, Gardiner, Beaulieu, Mayoras 3:51.23 2019
-200 Freestyle Relay Yamashita, Sauve, Joyce, Sauve 1:35.15 2018
-400 Freestyle Relay Wang, Yamashita, Sauve, Sauve 3:30.55 2016
-800 Freestyle Relay Sauve, Wang, Kane, Sauve 7:38.39 2016
-1-Meter Diving (6) Jessica Kugelman 293.25 2020
-3-Meter Diving (6) Jessica Kugelman 305.20 2018
-1-Meter Diving (11) Madeline Miller 485.10 2014
-3-Meter Diving (11) Jessica Kugelman 489.50 2017
-
-50 Freestyle  Everett McNair  20.71 2019
-100 Freestyle Hans Foerster 45.65 1987
-200 Freestyle Ben Fell  1:40.85 2003
-500 Freestyle Trevor Maxfield 4:35.95 2020
-1000 Freestyle  Trevor Maxfield 9:45.66 2018
-1650 Freestyle Trevor Maxfield  16:12.88 2019
-100 Backstroke Harrison Bass  50.34 2020
-200 Backstroke  Harrison Bass 1:50.51 2020
-100 Butterfly Lorenzo Gurri 49.76 2020
-200 Butterfly Alex Aung 1:50.59 2020
-100 Breaststroke  Julian Schott 55.90 2011
-200 Breaststroke  Cory Madalena 2:04.09 2018
-200 Indv. Medley  Aleksey Makarov 1:52.89 2020
-400 Indv. Medley  Rob Unruh 4:06.28 1993
-200 Medley Relay  Bass, Yang, Aung, Zola 1:32.35 2020
-400 Medley Relay Pan, Yang, Aung, Alberta 3:22.66 2019
-200 Freestyle Relay McNair, Zola, Bass, Alberta 1:23.04 2019
-400 Freestyle Relay McNair, Zola, Maxfield, Alberta 3:04.15 2019
-800 Freestyle Relay Alberta, Maxfield, Yang, Zola 6:51.83 2019
-1-Meter Diving (6) Miguel Hummel 303.15 2013
-3-Meter Diving (6) Miguel Hummel 336.15 2013
-1-Meter Diving (11) Miguel Hummel 497.85 2013
-3-Meter Diving (11) Miguel Hummel 556.40 2013
+team,dist,stroke,name,time,year
+Women,50,Freestyle,Kaitlin Joyce,24.01,2019
+Women,100,Freestyle,Allison Geer,51.88,2002
+Women,200,Freestyle,Jessica Sauve,1:52.25,2017
+Women,500,Freestyle,Jessica Sauve,4:56.58,2017
+Women,1000,Freestyle,Tina Belletete,10:36.74,2011
+Women,1650,Freestyle,Tina Belletete,17:35.72,2011
+Women,100,Backstroke,Amanda Wang,55.59,2019
+Women,200,Backstroke,Megan Beaulieu,2:02.53,2019
+Women,100,Butterfly,Shanny Lin,57.15,2017
+Women,200,Butterfly,Shanny Lin,2:01.19,2016
+Women,100,Breaststroke,Katrina Lopez,1:06.42,2020
+Women,200,Breaststroke,Meghan Hartman,2:19.21,2004
+Women,200,IM,Megan Beaulieu,2:07.33,2020
+Women,400,IM,Danielle Sauve,4:27.95,2017
+Women,200,Medley Relay,'Wang, Sauve, Yamashita, Sauve',1:44.33,2018
+Women,400,Medley Relay,'Wang, Gardiner, Beaulieu, Mayoras',3:51.23,2019
+Women,200,Free Relay,'Yamashita, Sauve, Joyce, Sauve',1:35.15,2018
+Women,400,Free Relay,'Wang, Yamashita, Sauve, Sauve',3:30.55,2016
+Women,800,Free Relay,'Sauve, Wang, Kane, Sauve',7:38.39,2016
+Women,1-Meter,Diving (6),Jessica Kugelman,293.25,2020
+Women,3-Meter,Diving (6),Jessica Kugelman,305.20,2018
+Women,1-Meter,Diving (11),Madeline Miller,485.10,2014
+Women,3-Meter,Diving (11),Jessica Kugelman,489.50,2017
+Men,50,Freestyle,Everett McNair,20.71,2019
+Men,100,Freestyle,Hans Foerster,45.65,1987
+Men,200,Freestyle,Ben Fell,1:40.85,2003
+Men,500,Freestyle,Trevor Maxfield,4:35.95,2020
+Men,1000,Freestyle,Trevor Maxfield,9:45.66,2018
+Men,1650,Freestyle,Trevor Maxfield,16:12.88,2019
+Men,100,Backstroke,Harrison Bass,50.34,2020
+Men,200,Backstroke,Harrison Bass,50.51,2020
+Men,100,Butterfly,Lorenzo Gurri,49.76,2020
+Men,200,Butterfly,Alex Aung,1:50.59,2020
+Men,100,Breaststroke,Julian Schott,55.90,2011
+Men,200,Breaststroke,Cory Madalena,2:04.09,2018
+Men,200,IM,Aleksey Makarov,1:52.89,2020
+Men,400,IM,Rob Unruh,4:06.28,1993
+Men,200,Medley Relay,'Bass, Yang, Aung, Zola',1:32.35,2020
+Men,400,Medley Relay,'Pan, Yang, Aung, Alberta',3:22.66,2019
+Men,200,Free Relay,'McNair, Zola, Bass, Alberta',1:23.04,2019
+Men,400,Free Relay,'McNair, Zola, Maxfield, Alberta',3:04.15,2019
+Men,800,Free Relay,'Alberta, Maxfield, Yang, Zola',6:51.83,2019
+Men,1-Meter,Diving (6),Miguel Hummel,303.15,2013
+Men,3-Meter,Diving (6),Miguel Hummel,336.15,2013
+Men,1-Meter,Diving (11),Miguel Hummel,497.85,2013
+Men,3-Meter,Diving (11),Miguel Hummel,556.40,2013

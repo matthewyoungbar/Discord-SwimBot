@@ -1,13 +1,21 @@
+import pandas
 import requests
 import urllib.parse
 from discord.ext import commands
-import recordParser
 
 TOKEN = open("token.txt").read().strip()
-
-recordDict, nameDict = recordParser.parseRecords("records.csv")
-
+records = pandas.read_csv('records.csv', quotechar="'")
 bot = commands.Bot(command_prefix='!')
+
+stroke_shortnames = {
+    'Butterfly': ['fly', 'fl'],
+    'Backstroke': ['back', 'bk'],
+    'Breaststroke': ['breastroke', 'breast', 'br'],
+    'Freestyle': ['free', 'fr'],
+    'IM': ['i.m.', 'individual medley'],
+    'Medley Relay': [],
+    'Free Relay': ['freestyle relay', 'fr relay']
+}
 
 @bot.command()
 async def ping(ctx):
@@ -29,7 +37,7 @@ async def collegeswimming(ctx, *args):
             swimmers += f"{swimmer['location']}\n"
         await ctx.send("There were multiple results. Please provide a more specific search.\n```\n" + swimmers + '```')
     elif len(results) == 0:
-        await ctx.send("There were no results. Either your search is too broard or too narrow.")
+        await ctx.send("There were no meaningful results. Either your search is too broard or too narrow.")
 
 @bot.command()
 async def cs(ctx, *args):
@@ -37,19 +45,26 @@ async def cs(ctx, *args):
 
 @bot.command()
 async def record(ctx, *args):
-    query = ' '.join(args)
-    results = ""
-    if recordDict.get(query) != None:
-        for i in recordDict[query]:
-            results += "Record for " + query + " is " + i["name"] + " with a " + i["time"] + " in " + i["year"] + "\n"
-        await ctx.send(results)
-    elif nameDict.get(query) != None:
-        results += query + " has the following record(s):\n"
-        for i in nameDict[query]:
-            results += i["event"] + " with a time of " + i["time"] + " in the year " + i["year"] + "\n"
-        await ctx.send(results)
-    else:
-        await ctx.send("Couldn't find that record.")
+    if len(args) < 2:
+        return
 
+    if args[0].isnumeric():
+        distance = args[0]
+        stroke = ' '.join(args[1:])
+        for strokename, shortnames in stroke_shortnames.items():
+            if stroke.lower() == strokename.lower() or stroke.lower() in shortnames:
+                stroke = strokename
+                results = records[(records['dist'] == distance) & (records['stroke'] == stroke)][['team', 'name', 'time', 'year']]
+                await ctx.send('```\n' + results.to_string(index=False) + '```')
+                break
+        else: # no break, so invalid stroke name
+            await ctx.send('Invalid event.')
+    else:
+        first, last = args
+        results = records[records['name'].str.contains(last)][['dist', 'stroke', 'time', 'year']]
+        if len(results) == 0:
+            await ctx.send('Name not found.')
+        else:
+            await ctx.send('```\n' + results.to_string(index=False) + '```')
 
 bot.run(TOKEN)
