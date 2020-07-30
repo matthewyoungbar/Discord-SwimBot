@@ -1,9 +1,10 @@
 import pandas
 import requests
 import urllib.parse
+import os
 from discord.ext import commands
 
-TOKEN = open("token.txt").read().strip()
+TOKEN = os.environ.get("SWIMBOT_TOKEN")
 records = pandas.read_csv('records.csv', quotechar="'")
 bot = commands.Bot(command_prefix='!')
 
