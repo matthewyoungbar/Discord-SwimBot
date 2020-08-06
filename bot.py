@@ -14,13 +14,17 @@ stroke_shortnames = {
     'Breaststroke': ['breastroke', 'breast', 'br'],
     'Freestyle': ['free', 'fr'],
     'IM': ['i.m.', 'individual medley'],
-    'Medley Relay': [],
+    'Medley Relay': ['medley', 'mr'],
     'Free Relay': ['freestyle relay', 'fr relay']
 }
 
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong!')
+
+@bot.command()
+async def marco(ctx):
+    await ctx.send('polo!')
 
 @bot.command()
 async def collegeswimming(ctx, *args):
@@ -38,7 +42,7 @@ async def collegeswimming(ctx, *args):
             swimmers += f"{swimmer['location']}\n"
         await ctx.send("There were multiple results. Please provide a more specific search.\n```\n" + swimmers + '```')
     elif len(results) == 0:
-        await ctx.send("There were no meaningful results. Either your search is too broard or too narrow.")
+        await ctx.send("There were no meaningful results. Either your search is too broad or too narrow.")
 
 @bot.command()
 async def cs(ctx, *args):
